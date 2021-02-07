@@ -2,15 +2,15 @@ version: '3.8'
 
 services:
   angular:
-    container_name: angular-container
+    container_name: angular-image
     build: ./frontend
     volumes: 
       - ./frontend:/app
     ports: 
-      - 4200:4200
+      - 4200:80
     
   django:
-    container_name: django-container
+    container_name: django-image
     build: ./backend/CRUD/
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
