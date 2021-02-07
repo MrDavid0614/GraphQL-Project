@@ -2,8 +2,13 @@ version: '3.8'
 
 services:
   angular:
-    build:
-      context: ./frontend
+    hostname: localhost
+    build: 
+      context: /frontend
+    volumes: 
+      - .:/app
+    ports: 
+      - 4200:4200
     
   django:
     build: 
