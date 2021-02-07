@@ -2,19 +2,18 @@ version: '3.8'
 
 services:
   angular:
-    hostname: localhost
-    build: 
-      context: /frontend
+    container_name: angular-container
+    build: ./frontend
     volumes: 
-      - .:/app
+      - ./frontend:/app
     ports: 
       - 4200:4200
     
   django:
-    build: 
-      context: ./backend/CRUD
+    container_name: django-container
+    build: ./backend/CRUD/
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/backend
+      - ./backend/CRUD:/backend
     ports: 
       - 8000:8000
