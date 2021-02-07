@@ -1,7 +1,6 @@
 FROM python:3.8.5
 ENV PYTHONUNBUFFERED=1
 WORKDIR /backend
-ADD . .
-COPY ./requirements.txt /backend/requirements.txt
+COPY requirements.txt /backend/
 RUN pip install -r requirements.txt
-COPY . .
+COPY . /backend/
