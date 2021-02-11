@@ -3,11 +3,12 @@ from .models import Car
 
 class TestCarModel(TestCase):
 
-    def test_create_car_model_succesful(TestCase):
+    def test_create_car_succesful(self):
         car1 = Car.objects.create(
-            brand="Toyota", 
-            model="Camry", 
-            color="Red", 
+            brand="Kia", 
+            model="Pikanto", 
+            color="White", 
             year="2018-02-06")
         
-        assert Car.objects.all(), car1
+        self.assertEqual(Car.objects.get(brand="Kia"), car1)
+    
