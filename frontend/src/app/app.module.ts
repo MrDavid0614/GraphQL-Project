@@ -6,11 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
+import { MatLabel } from '@angular/material/form-field'
 
 import { AppComponent } from './app.component';
 import { CarsComponent } from './components/Car/cars.component';
-import { GraphQLModule } from './graphql.module';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    GraphQLModule,
-    HttpClientModule
+    MatLabel,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { CarsComponent } from './components/Car/cars.component';
 
 describe('AppComponent', () => {
     let component: AppComponent;
     let fixture: ComponentFixture<AppComponent>;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             declarations: [AppComponent]
         })
@@ -22,4 +23,9 @@ describe('AppComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+
+    it('should have a title equal to "learningAngular"', () => {
+        expect(component.title === "learningAngular").toBeTruthy();
+    })
+    
 });
